@@ -1,0 +1,58 @@
+H1{ 
+    text-align: center;
+  
+}
+
+
+H2{
+    text-align: center;
+}
+#head-container{
+    display: flex;
+}
+
+#middle-container{
+    margin-top: 100px;
+}
+
+.sub-section{
+    margin-bottom: 50px;
+}
+
+#UserBtn{
+margin-left: 55px;
+width: 250px;
+height: 75px;
+font-family: 'Courier New', Courier, monospace;
+font-size: 20px;
+margin-bottom: 45px;
+}
+
+#HelpBtn{
+    margin-left: 55px;
+    width: 250px;
+    height: 75px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin-top: 45px;
+    }
+    
+ #dropdown {
+  display: none;
+}
+
+#dropdown.active {
+  display: block;
+}
+
+#hamburger {
+  display: block;
+}
+
+#hamburger span {
+  display: block;
+  height: 4px;
+  width: 20px;
+  margin-bottom: 4px;
+  background-color: black;
+}
