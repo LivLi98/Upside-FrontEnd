@@ -1,38 +1,32 @@
-H1{ 
-    text-align: center;  
-}
 
-H2{
-    text-align: center;
-}
 #head-container{
     display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
 }
 
 #middle-container{
-    margin-top: 100px;
-}
-
-.sub-section{
-    margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 60vh;
+  margin-top:10vh;
+  border: 1px solid black;
 }
 
 #UserBtn{
-margin-left: 55px;
 width: 250px;
 height: 75px;
 font-family: 'Courier New', Courier, monospace;
 font-size: 20px;
-margin-bottom: 45px;
 }
 
 #HelpBtn{
-    margin-left: 55px;
     width: 250px;
     height: 75px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
-    margin-top: 45px;
     }
     
  #dropdown {
