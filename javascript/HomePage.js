@@ -121,6 +121,7 @@ const dropdown = document.getElementById('dropdown');
 const searchArea = document.querySelector('.form');
 const midContainer = document.querySelector('#middle-container');
 
+
 const startArea = document.querySelector('.startBtns');
 const existUserBtn = document.querySelector('#UserBtn');
 const getHelpBtn = document.querySelector('#HelpBtn');
