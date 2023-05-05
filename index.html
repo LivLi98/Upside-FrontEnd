@@ -19,8 +19,31 @@
         </div>   
     </div>
         <div id="middle-container">
+
+            <div class="startBtns">
             <button type="submit" value="Get Help Now" id="HelpBtn">Get Help Now</button>     
-            <button type="submit" value="Existing User" id="UserBtn">Existing User </button>          
+            <button type="submit" value="Existing User" id="UserBtn">Existing User </button>     
+            </div>
+            <div class="form hide">
+                <form>
+                    <div class="info-container">
+                        <label for="name"></label>
+                        <input type="text" name="Name" placeholder="Name"/>
+                    <label for="search-text"></label>
+                    <input type="text" id="search-text" list="search-options" placeholder="I'm Looking For Help With:">
+                    <datalist id="search-options">
+                        <option value="Forgiveness"></option>
+                        <option value="Traumatic Issues"></option>
+                        <option value="Social Anxiety"></option>
+                        <option value="Loss or Grief"></option>
+                        <option value="Other"></option>
+                    </datalist>
+                        <div>
+                            <button type="submit" class="searchBtn">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>     
         </div>
         <script src="javascript/HomePage.js"></script>
         <script src="javascript/SignIn.js"></script>
