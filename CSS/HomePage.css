@@ -1,0 +1,50 @@
+
+#head-container{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+#middle-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 60vh;
+  margin-top:10vh;
+  border: 1px solid black;
+}
+
+#UserBtn{
+width: 250px;
+height: 75px;
+font-family: 'Courier New', Courier, monospace;
+font-size: 20px;
+}
+
+#HelpBtn{
+    width: 250px;
+    height: 75px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    }
+    
+ #dropdown {
+  display: none;
+}
+
+#dropdown.active {
+  display: block;
+}
+
+#hamburger {
+  display: block;
+}
+
+#hamburger span {
+  display: block;
+  height: 4px;
+  width: 20px;
+  margin-bottom: 4px;
+  background-color: black;
+}
