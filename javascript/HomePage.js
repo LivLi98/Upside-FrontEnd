@@ -2,7 +2,6 @@ const hamburger = document.getElementById('hamburger');
 const dropdown = document.getElementById('dropdown');
 
 const midContainer = document.querySelector('#middle-container')
-const existUserBtn = document.querySelector('#UserBtn')
 const getHelpBtn = document.querySelector('#HelpBtn')
 
 
@@ -42,7 +41,3 @@ getHelpBtn.addEventListener('click', (e) => {
 
 });
 
-existUserBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  console.log('Existing user button pressed');
-})

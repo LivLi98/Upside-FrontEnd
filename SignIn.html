@@ -10,14 +10,34 @@
 <body>
     <div style="border:1px solid black" id="head-container">
         <h1>UPSIDE THERAPY</h1>                
-<div id="hamburger">
-    <ul>
-      <li><a href="#">Home</li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-     </ul>
-</div>   
-</div>
+        <div id="hamburger">
+            <ul>
+                <li><a href="#">Home</li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>   
+    </div>
+    <div style="border:1px solid black" id="middle-container">
+        <h1>Sign In</h1>
+            <form>
+                <div id="userN">
+                    <label for="username">Username:</label> 
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div id="passW">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="submit">
+                    <button type="submit">Log In</button>   
+                    <p>Forgot password?</p>
+                </div>
+            </form>
     
+    
+    
+    </div>
+    <script src="javascript/SignIn.js"></script>
 </body>
 </html>
