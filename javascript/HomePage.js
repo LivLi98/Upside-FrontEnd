@@ -1,4 +1,3 @@
-
 const hamburger = document.getElementById('hamburger');
 const dropdown = document.getElementById('dropdown');
 const searchArea = document.querySelector('.form');
@@ -12,7 +11,7 @@ const getHelpBtn = document.querySelector('#HelpBtn');
 const searchBtn = document.querySelector('.searchBtn');
 const search = document.querySelector('#search-text');
 
-let url = `https://upside-backend.onrender.com/${}`;
+let url = `https://upside-backend.onrender.com/`;
 
 HBtn.addEventListener('click', (w) => {
     w.preventDefault();
@@ -22,7 +21,7 @@ HBtn.addEventListener('click', (w) => {
 
 existUserBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    window.open('/SignIn.html','_top')
+    window.open('/HTML/SignIn.html','_top')
     console.log('Existing user button pressed');
 });
 
@@ -42,7 +41,7 @@ searchBtn.addEventListener('click', (e) => {
   midContainer.innerHTML = '';
   let specialtySearch = search.value;
   console.log(specialtySearch);
-  fetch()
+  // fetch()
   createTherapistList(therapists, specialtySearch)
 });
 
@@ -84,7 +83,7 @@ searchBtn.addEventListener('click', (e) => {
           callNowBtn.addEventListener('click', (e) => {
             //Here we need some code to bring us to the active call page.
           })
-          callNowBtn.setAttribute('class', 'optionBtn');
+          callNowBtn.setAttribute('class', 'callBtn');
           callNowBtn.innerText = 'Call now';
           optionsBtns.append(callNowBtn);
           
@@ -92,7 +91,7 @@ searchBtn.addEventListener('click', (e) => {
           aptBtn.addEventListener('click', (e) => {
             //Here we need some code to take us to a scheduling page.
           })
-          aptBtn.setAttribute('class', 'optionBtn');
+          aptBtn.setAttribute('class', 'aptBtn');
           aptBtn.innerText = 'Schedule Apt.'
           optionsBtns.append(aptBtn);
 
