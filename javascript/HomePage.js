@@ -191,7 +191,7 @@ searchBtn.addEventListener('click', (e) => {
           callNowBtn.addEventListener('click', (e) => {
             //Here we need some code to bring us to the active call page.
           })
-          callNowBtn.setAttribute('class', 'optionBtn');
+          callNowBtn.setAttribute('class', 'callBtn');
           callNowBtn.innerText = 'Call now';
           optionsBtns.append(callNowBtn);
           
@@ -199,7 +199,7 @@ searchBtn.addEventListener('click', (e) => {
           aptBtn.addEventListener('click', (e) => {
             //Here we need some code to take us to a scheduling page.
           })
-          aptBtn.setAttribute('class', 'optionBtn');
+          aptBtn.setAttribute('class', 'aptBtn');
           aptBtn.innerText = 'Schedule Apt.'
           optionsBtns.append(aptBtn);
 
