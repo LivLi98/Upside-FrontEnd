@@ -1,4 +1,3 @@
-
 const hamburger = document.getElementById('hamburger');
 const dropdown = document.getElementById('dropdown');
 const searchArea = document.querySelector('.form');
@@ -12,7 +11,7 @@ const getHelpBtn = document.querySelector('#HelpBtn');
 const searchBtn = document.querySelector('.searchBtn');
 const search = document.querySelector('#search-text');
 
-let url = `https://upside-backend.onrender.com/${}`;
+let url = `https://upside-backend.onrender.com/`;
 
 HBtn.addEventListener('click', (w) => {
     w.preventDefault();
@@ -42,7 +41,7 @@ searchBtn.addEventListener('click', (e) => {
   midContainer.innerHTML = '';
   let specialtySearch = search.value;
   console.log(specialtySearch);
-  fetch()
+  // fetch()
   createTherapistList(therapists, specialtySearch)
 });
 
