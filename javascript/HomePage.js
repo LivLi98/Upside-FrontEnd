@@ -122,12 +122,25 @@ const searchArea = document.querySelector('.form');
 const midContainer = document.querySelector('#middle-container');
 
 
+const HBtn = document.getElementById('homeBtn')
 const startArea = document.querySelector('.startBtns');
 const existUserBtn = document.querySelector('#UserBtn');
 const getHelpBtn = document.querySelector('#HelpBtn');
 const searchBtn = document.querySelector('.searchBtn');
 const search = document.querySelector('#search-text')
 
+
+HBtn.addEventListener('click', (w) => {
+    w.preventDefault();
+    window.open('/', '_top');
+    console.log('Button Pushed');
+});
+
+existUserBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open('/SignIn.html','_top')
+    console.log('Existing user button pressed');
+});
 
 hamburger.addEventListener('click', function() {
   dropdown.classList.toggle('active');
@@ -139,11 +152,6 @@ getHelpBtn.addEventListener('click', (e) => {
   startArea.classList.toggle('hide')
   searchArea.classList.toggle('hide')
 });
-
-existUserBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  console.log('Existing user button pressed');
-})
 
 searchBtn.addEventListener('click', (e) => {
   e.preventDefault();
