@@ -1,0 +1,32 @@
+h1{
+    text-align: center;
+}
+#middle-container{
+    margin-top: 50px;
+}
+#head-container{
+    display: flex;
+}
+
+#hamburger span {
+    display: block;
+    height: 4px;
+    width: 20px;
+    margin-bottom: 4px;
+    background-color: black;
+}
+
+#userN{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#passW{
+    text-align: center;
+}
+
+.submit{
+    margin-top: 50px;
+text-align: center;
+margin-bottom: 40px;
+}
