@@ -129,6 +129,13 @@ const searchBtn = document.querySelector('.searchBtn');
 const search = document.querySelector('#search-text')
 
 
+
+existUserBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open('http://127.0.0.1:5502/SignIn.html','_top')
+    console.log('Existing user button pressed');
+})
+
 hamburger.addEventListener('click', function() {
   dropdown.classList.toggle('active');
 });
