@@ -138,7 +138,7 @@ HBtn.addEventListener('click', (w) => {
 
 existUserBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    window.open('/SignIn.html','_top')
+    window.open('/HTML/SignIn.html','_top')
     console.log('Existing user button pressed');
 });
 
