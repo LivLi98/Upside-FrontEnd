@@ -65,10 +65,6 @@ searchBtn.addEventListener('click', (e) => {
     let container = document.createElement('div');
     container.setAttribute('class', 'main-wrapper');
     midContainer.insertAdjacentElement('afterbegin', container);
-    let greeting = document.createElement('span');
-    greeting.setAttribute('class', 'search-greeting');
-    midContainer.insertAdjacentElement('afterbegin', greeting);
-    greeting.innerText = `Test message`;
     
     arr.forEach(therapist => {
         let cell = document.createElement('article');

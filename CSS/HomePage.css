@@ -65,6 +65,12 @@ body {
   color: rgba(255, 255, 255, 0.829);
 }
 
+#app-descriptor {
+  background-color: rgba(128, 128, 128, 0.61);
+  border: 1px solid black;
+  padding: 5px;
+}
+
 #search-text{
   width: auto;
 }
@@ -139,8 +145,9 @@ body {
 }
 .therapistSpecs {
   text-align: center;
-  border: 1px solid black;
-  background-color: #de891d;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-image: linear-gradient( to right,rgba(0, 0, 0, 0.300), #de8a1dce, rgba(0, 0, 0, 0.300));
   padding:2.5px;
   width: 100%;
 }
