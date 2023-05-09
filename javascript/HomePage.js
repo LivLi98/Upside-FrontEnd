@@ -1,121 +1,3 @@
-let therapists = [  {
-  "id": 1,
-  "name": "Dr. Jane Smith",
-  "specialty": "Depression"
-},
-{
-  "id": 2,
-  "name": "Dr. Michael Lee",
-  "specialty": "Anxiety"
-},
-{
-  "id": 3,
-  "name": "Dr. Karen Johnson",
-  "specialty": "Relationship Issues"
-},
-{
-  "id": 4,
-  "name": "Dr. Sarah Patel",
-  "specialty": "Social Anxiety"
-},
-{
-  "id": 5,
-  "name": "Dr. Robert Garcia",
-  "specialty": "Addiction"
-},
-{
-  "id": 6,
-  "name": "Dr. Amanda Jones",
-  "specialty": "Trauma"
-},
-{
-  "id": 7,
-  "name": "Dr. Eric Kim",
-  "specialty": "Obsessive-Compulsive Disorder (OCD)"
-},
-{
-  "id": 8,
-  "name": "Dr. Samantha Chen",
-  "specialty": "Attention Deficit Hyperactivity Disorder (ADHD)"
-},
-{
-  "id": 9,
-  "name": "Dr. William Davis",
-  "specialty": "Bipolar Disorder"
-},
-{
-  "id": 10,
-  "name": "Dr. Laura Robinson",
-  "specialty": "Child and Adolescent Therapy"
-},
-{
-  "id": 11,
-  "name": "Dr. Daniel Hernandez",
-  "specialty": "Post-Traumatic Stress Disorder (PTSD)"
-},
-{
-  "id": 12,
-  "name": "Dr. Rachel Nguyen",
-  "specialty": "Grief and Loss"
-},
-{
-  "id": 13,
-  "name": "Dr. John Kim",
-  "specialty": "Anger Management"
-},
-{
-  "id": 14,
-  "name": "Dr. Elizabeth Martinez",
-  "specialty": "Sleep Disorders"
-},
-{
-  "id": 15,
-  "name": "Dr. Kevin Lee",
-  "specialty": "Phobias"
-},
-{
-  "id": 16,
-  "name": "Dr. Anna Brown",
-  "specialty": "Borderline Personality Disorder (BPD)"
-},
-{
-  "id": 17,
-  "name": "Dr. Timothy Green",
-  "specialty": "Gender Identity"
-},
-{
-  "id": 18,
-  "name": "Dr. Maria Rodriguez",
-  "specialty": "Self-Esteem and Confidence"
-},
-{
-  "id": 19,
-  "name": "Dr. Christopher Chen",
-  "specialty": "Couples Therapy"
-},
-{
-  "id": 20,
-  "name": "Dr. Emily Taylor",
-  "specialty": "Career Counseling"
-},
-{
-  "id": 21,
-  "name": "Dr. Matthew Adams",
-  "specialty": "Social Anxiety"
-},
-{
-  "id": 22,
-  "name": "Dr. Jasmine Kim",
-  "specialty": "Body Image Issues"
-},
-{
-  "id": 23,
-  "name": "Dr. Stephen Park",
-  "specialty": "Panic Attacks"
-}
-]
-
-
 const hamburger = document.getElementById('hamburger');
 const dropdown = document.getElementById('dropdown');
 const searchArea = document.querySelector('.form');
@@ -127,7 +9,29 @@ const startArea = document.querySelector('.startBtns');
 const existUserBtn = document.querySelector('#UserBtn');
 const getHelpBtn = document.querySelector('#HelpBtn');
 const searchBtn = document.querySelector('.searchBtn');
-const search = document.querySelector('#search-text')
+const search = document.querySelector('#search-text');
+
+let url = `https://upside-backend.onrender.com/`;
+
+let searchFetch = async (searchString) => {
+  const url = `https://cors-proxy4.p.rapidapi.com/?url=https%3A%2F%2Fupside-backend.onrender.com%2Ftherapists%2Fsearch%2F${searchString}`;
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'eb9c01dd2amsh29cc615fc4e14e2p163bddjsnd09fbf5da34e',
+      'X-RapidAPI-Host': 'cors-proxy4.p.rapidapi.com'
+    }
+  };
+  
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    console.log(result);
+    createTherapistList(result);
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 
 HBtn.addEventListener('click', (w) => {
@@ -138,12 +42,8 @@ HBtn.addEventListener('click', (w) => {
 
 existUserBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    window.open('/SignIn.html','_top')
+    window.open('/HTML/SignIn.html','_top')
     console.log('Existing user button pressed');
-});
-
-hamburger.addEventListener('click', function() {
-  dropdown.classList.toggle('active');
 });
 
 getHelpBtn.addEventListener('click', (e) => {
@@ -156,16 +56,15 @@ getHelpBtn.addEventListener('click', (e) => {
 searchBtn.addEventListener('click', (e) => {
   e.preventDefault();
   midContainer.innerHTML = '';
-  let specialtySearch = search.value;
-  console.log(specialtySearch);
-  createTherapistList(therapists, specialtySearch)
+  let specialtySearch = encodeURIComponent(search.value);
+  searchFetch(specialtySearch); 
+  // createTherapistList(, specialtySearch)
 });
 
 
 // Function for creating profile cells for therapist search results.
-  let createTherapistList = (arr, specialty) => {
+  let createTherapistList = (arr) => {
     arr.forEach(therapist => {
-      if(specialty?specialty.toLowerCase() === therapist.specialty.toLowerCase() : true) {
         let cell = document.createElement('article');
         cell.setAttribute('class', 'therapistCell');
         midContainer.append(cell);
@@ -199,7 +98,7 @@ searchBtn.addEventListener('click', (e) => {
           callNowBtn.addEventListener('click', (e) => {
             //Here we need some code to bring us to the active call page.
           })
-          callNowBtn.setAttribute('class', 'optionBtn');
+          callNowBtn.setAttribute('class', 'callBtn');
           callNowBtn.innerText = 'Call now';
           optionsBtns.append(callNowBtn);
           
@@ -207,7 +106,7 @@ searchBtn.addEventListener('click', (e) => {
           aptBtn.addEventListener('click', (e) => {
             //Here we need some code to take us to a scheduling page.
           })
-          aptBtn.setAttribute('class', 'optionBtn');
+          aptBtn.setAttribute('class', 'aptBtn');
           aptBtn.innerText = 'Schedule Apt.'
           optionsBtns.append(aptBtn);
 
@@ -218,6 +117,6 @@ searchBtn.addEventListener('click', (e) => {
           profileBtn.innerText = 'View Profile'
           profileBtn.setAttribute('class', 'optionBtn')
           optionsBtns.append(profileBtn);
-      }
+  
     });
   }
