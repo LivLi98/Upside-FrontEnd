@@ -1,7 +1,9 @@
 h1{
     text-align: center;
+    color: white;
 }
 #middle-container{
+
     
     margin-top: 3vh;
     border: 1px solid black;
@@ -23,6 +25,7 @@ h1{
     width: 20px;
     margin-bottom: 4px;
     background-color: black;
+    
 }
 
 #userN{
@@ -40,3 +43,10 @@ h1{
 text-align: center;
 margin-bottom: 40px;
 }
+
+/* body {
+background-image: url(Atlanta-scaled.png);
+background-size: 200px 200px;
+} */
+
+ 
