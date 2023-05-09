@@ -132,5 +132,7 @@
 }
 
 body {
- background-color: #f5f5f5;
+background-image: url(Atlanta-scaled.png);
+background-size: 200px 200px;
+background-attachment: fixed;
 }
