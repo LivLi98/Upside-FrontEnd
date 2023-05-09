@@ -17,6 +17,7 @@ body {
   background-image: url("./Public/Atlanta-scaled.jpg");
   background-repeat: no-repeat;
 }
+
 ul {
     list-style-type: none;
 }
@@ -74,6 +75,7 @@ ul {
   background-color: rgba(128, 128, 128, 0.61);
   border: 1px solid black;
   padding: 5px;
+  color: white;
 }
 
 #search-text{

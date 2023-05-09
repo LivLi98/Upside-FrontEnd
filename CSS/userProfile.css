@@ -6,6 +6,9 @@
   background-color: #466ca2df;
   color: white;
 }
+ul {
+  list-style-type: none;
+}
 
 .container {
   width: 100%;
