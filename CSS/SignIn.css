@@ -2,10 +2,19 @@ h1{
     text-align: center;
 }
 #middle-container{
-    margin-top: 50px;
+    
+    margin-top: 3vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #466ca2;
 }
 #head-container{
     display: flex;
+    justify-content: space-between;
+    margin-top: 3vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #466ca2;
 }
 
 #hamburger span {
@@ -19,6 +28,7 @@ h1{
 #userN{
     text-align: center;
     margin-bottom: 20px;
+    
 }
 
 #passW{
