@@ -3,6 +3,10 @@ h1 {
   color: white;
 }
 
+ul {
+  list-style-type: none;
+}
+
 #middle-container {
   margin-top: 3vh;
   border: 1px solid black;
@@ -50,6 +54,6 @@ h1 {
   margin-bottom: 40px;
 }
 
-body { 
-    background-color: rgb(212, 222, 239);
+body {
+  background-color: rgb(212, 222, 239);
 }
