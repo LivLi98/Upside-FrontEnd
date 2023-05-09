@@ -17,6 +17,10 @@ body {
   background-image: url("./Public/Atlanta-scaled.jpg");
   background-repeat: no-repeat;
 }
+ul {
+    list-style-type: none;
+}
+
 
 #middle-container {
   display: flex;
