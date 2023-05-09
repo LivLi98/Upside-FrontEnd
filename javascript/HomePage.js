@@ -11,8 +11,6 @@ const getHelpBtn = document.querySelector('#HelpBtn');
 const searchBtn = document.querySelector('.searchBtn');
 const search = document.querySelector('#search-text');
 
-let url = `https://upside-backend.onrender.com/`;
-
 let searchFetch = async (searchString) => {
   const url = `https://cors-proxy4.p.rapidapi.com/?url=https%3A%2F%2Fupside-backend.onrender.com%2Ftherapists%2Fsearch%2F${searchString}`;
   const options = {
@@ -64,21 +62,25 @@ searchBtn.addEventListener('click', (e) => {
 
 // Function for creating profile cells for therapist search results.
   let createTherapistList = (arr) => {
+    let container = document.createElement('div');
+    container.setAttribute('class', 'main-wrapper');
+    midContainer.insertAdjacentElement('afterbegin', container);
+    
     arr.forEach(therapist => {
         let cell = document.createElement('article');
         cell.setAttribute('class', 'therapistCell');
-        midContainer.append(cell);
+        container.append(cell);
 
         let cardInfo = document.createElement('header');
         cardInfo.setAttribute('class', 'cardInfo');
         cell.append(cardInfo);
 
-        if (therapist.profilePic) {
-          let profilePic = document.createElement('img')
-          profilePic.setAttribute('class', 'therapistPic')
-          profilePic.src = `${therapist.profilePic}`;
-          cardInfo.append(profilePic);
-        } 
+
+        let profilePic = document.createElement('img')
+        profilePic.setAttribute('class', 'therapistPic')
+        profilePic.src = `${therapist.imgUrl}`;
+        cardInfo.append(profilePic);
+      
 
         let name = document.createElement('h');
         name.setAttribute('class', 'therapistName');
@@ -87,7 +89,7 @@ searchBtn.addEventListener('click', (e) => {
 
         let specializations = document.createElement('p');
         specializations.setAttribute('class', 'therapistSpecs');
-        specializations.innerText = therapist.specialty;
+        specializations.innerText = `Specializations: \n` + therapist.specialties;
         cardInfo.append(specializations);
 
         let optionsBtns = document.createElement('div')

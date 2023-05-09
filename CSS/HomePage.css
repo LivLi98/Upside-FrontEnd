@@ -6,6 +6,10 @@
   color: #fff;
   border-radius: 5px;
   padding: 5px;
+  margin-bottom: 8px;
+}
+#head-container h1 {
+  text-shadow: 1px 1px 2px black;
 }
 
 body {
@@ -20,12 +24,21 @@ body {
   justify-content: center;
   align-items: center;
   height: 60vh;
-  margin-top: 3vh;
   border: 1px solid black;
   border-radius: 10px;
   background-color: #466ca2c3;
-  overflow: auto;
+  /* overflow: hidden; */
+  overflow-y: auto;
 }
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
 
 .startBtns {
   display: flex;
@@ -35,7 +48,8 @@ body {
 }
 
 #middle-container button {
-  border: 2px solid black;
+  border:1px solid black;
+
   border-radius: 5px;
   opacity: 90%;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.594);
@@ -50,6 +64,16 @@ body {
   margin: 10px;
   margin-top: -20px;
   color: #fff;
+}
+
+#app-descriptor {
+  background-color: rgba(128, 128, 128, 0.61);
+  border: 1px solid black;
+  padding: 5px;
+}
+
+#search-text{
+  width: auto;
 }
 
 #UserBtn {
@@ -71,6 +95,7 @@ body {
 
 #hamburger {
   display: block;
+
   margin-right: 3px;
 }
 
@@ -92,8 +117,20 @@ body {
   align-items: center;
   border: 1px solid black;
   background-color: rgba(110, 110, 110, 0.482);
+  border:1px solid black;
   width: 100%;
   margin: 2.5px;
+}
+
+.options {
+  z-index: 2;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+.options button {
+  margin: 5px;
+  width: 25%;
 }
 
 .cardInfo {
@@ -103,6 +140,18 @@ body {
   background-color: rgba(31, 31, 31, 0.515);
   color: #fff;
   align-items: center;
+  width: 95%;
+  margin-top: 5px;
+  border-radius: 5px;
+  text-shadow: 2px 2px 2px black;
+}
+.therapistSpecs {
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-image: linear-gradient( to right,rgba(0, 0, 0, 0.300), #de8a1dce, rgba(0, 0, 0, 0.300));
+  padding:2.5px;
+  width: 100%;
 }
 
 .callBtn {
@@ -134,3 +183,27 @@ body {
   margin-left: -12px;
   position: relative;
 }
+
+.therapistPic {
+  width: 55%;
+  /* height: 75%; */
+  border-radius: 50%;
+  border: 1px solid slategrey;
+}
+.therapistName {
+  margin-top: 5px;
+  margin-bottom: -10px;
+  background-color: #466ca2;
+  padding: 8px;
+}
+
+.search-greeting {
+  font-size: large;
+  color: white;
+  background-color: gray;
+  border: 1px solid black;
+  border-radius: 5px;
+  width:auto;
+  padding: 5px;
+}
+
