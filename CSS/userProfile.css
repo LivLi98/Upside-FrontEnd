@@ -10,10 +10,24 @@
     display: flex;   
     justify-content: space-between;
     justify-content: space-around;
-}
 
+}
+@media (max-width: 650px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+  
 #userInfo{
     height: 18cm;
     border-radius: 10px;
     width: 8cm;
+    margin-top: 40px;
+}
+
+#favInfo{
+    border-radius: 10px;
+    width: 8cm;
+    height: 18cm;
+    margin-top: 40px;
 }
