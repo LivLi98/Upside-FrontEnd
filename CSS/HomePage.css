@@ -12,7 +12,7 @@ body {
   background-color: #f5f5f5;
   background-image: url("./Public/Atlanta-scaled.jpg");
   background-repeat: no-repeat;
-}
+
 
 #middle-container {
   display: flex;
@@ -134,3 +134,4 @@ body {
   margin-left: -12px;
   position: relative;
 }
+

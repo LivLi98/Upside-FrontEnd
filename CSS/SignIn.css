@@ -1,11 +1,22 @@
 h1{
     text-align: center;
+    color: white;
 }
 #middle-container{
-    margin-top: 50px;
+
+    
+    margin-top: 3vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #466ca2;
 }
 #head-container{
     display: flex;
+    justify-content: space-between;
+    margin-top: 3vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #466ca2;
 }
 
 #hamburger span {
@@ -14,11 +25,13 @@ h1{
     width: 20px;
     margin-bottom: 4px;
     background-color: black;
+    
 }
 
 #userN{
     text-align: center;
     margin-bottom: 20px;
+    
 }
 
 #passW{
@@ -30,3 +43,10 @@ h1{
 text-align: center;
 margin-bottom: 40px;
 }
+
+/* body {
+background-image: url(Atlanta-scaled.png);
+background-size: 200px 200px;
+} */
+
+ 
