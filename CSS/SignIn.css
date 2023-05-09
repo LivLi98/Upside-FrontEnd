@@ -1,50 +1,55 @@
-h1{
-    text-align: center;
-    color: white;
+h1 {
+  text-align: center;
+  color: white;
 }
-#middle-container{
-    margin-top: 3vh;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: #466ca2;
+
+#middle-container {
+  margin-top: 3vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  background: linear-gradient(
+    rgba(15, 225, 123, 0.899),
+    rgba(45, 75, 117, 0.8)
+  );
+  border: 5px solid black;
+  margin-top: 60px;
+  padding: 30px;
+  color: white;
 }
-#head-container{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3vh;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: #466ca2;
+
+#head-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3vh;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #466ca2;
 }
 
 #hamburger span {
-    display: block;
-    height: 4px;
-    width: 20px;
-    margin-bottom: 4px;
-    background-color: black;
-    
+  display: block;
+  height: 4px;
+  width: 20px;
+  margin-bottom: 4px;
+  background-color: black;
 }
 
-#userN{
-    text-align: center;
-    margin-bottom: 20px;
-    
+#userN {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-#passW{
-    text-align: center;
+#passW {
+  text-align: center;
 }
 
-.submit{
-    margin-top: 50px;
-text-align: center;
-margin-bottom: 40px;
+.submit {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-/* body {
-background-image: url(Atlanta-scaled.png);
-background-size: 200px 200px;
-} */
-
- 
+body { 
+    background-color: rgb(212, 222, 239);
+}
