@@ -13,6 +13,27 @@ const search = document.querySelector('#search-text');
 
 let url = `https://upside-backend.onrender.com/`;
 
+let searchFetch = async (searchString) => {
+  const url = `https://cors-proxy4.p.rapidapi.com/?url=https%3A%2F%2Fupside-backend.onrender.com%2Ftherapists%2Fsearch%2F${searchString}`;
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'eb9c01dd2amsh29cc615fc4e14e2p163bddjsnd09fbf5da34e',
+      'X-RapidAPI-Host': 'cors-proxy4.p.rapidapi.com'
+    }
+  };
+  
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    console.log(result);
+    createTherapistList(result);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+
 HBtn.addEventListener('click', (w) => {
     w.preventDefault();
     window.open('/', '_top');
@@ -25,10 +46,6 @@ existUserBtn.addEventListener('click', (e) => {
     console.log('Existing user button pressed');
 });
 
-hamburger.addEventListener('click', function() {
-  dropdown.classList.toggle('active');
-});
-
 getHelpBtn.addEventListener('click', (e) => {
   e.preventDefault();
   console.log('Help button pressed')
@@ -39,17 +56,15 @@ getHelpBtn.addEventListener('click', (e) => {
 searchBtn.addEventListener('click', (e) => {
   e.preventDefault();
   midContainer.innerHTML = '';
-  let specialtySearch = search.value;
-  console.log(specialtySearch);
-  // fetch()
-  createTherapistList(therapists, specialtySearch)
+  let specialtySearch = encodeURIComponent(search.value);
+  searchFetch(specialtySearch); 
+  // createTherapistList(, specialtySearch)
 });
 
 
 // Function for creating profile cells for therapist search results.
-  let createTherapistList = (arr, specialty) => {
+  let createTherapistList = (arr) => {
     arr.forEach(therapist => {
-      if(specialty?specialty.toLowerCase() === therapist.specialty.toLowerCase() : true) {
         let cell = document.createElement('article');
         cell.setAttribute('class', 'therapistCell');
         midContainer.append(cell);
@@ -102,6 +117,6 @@ searchBtn.addEventListener('click', (e) => {
           profileBtn.innerText = 'View Profile'
           profileBtn.setAttribute('class', 'optionBtn')
           optionsBtns.append(profileBtn);
-      }
+  
     });
   }
