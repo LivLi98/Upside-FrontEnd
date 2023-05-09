@@ -3,22 +3,20 @@ h1{
     color: white;
 }
 #middle-container{
-    margin-top: 50px;
-    text-align: center;
-    background: linear-gradient(rgba(15, 225, 123, 0.899),rgba(45,75,117,.8));
-    border: 5px solid #4e9ccc;
+
+    
+    margin-top: 3vh;
+    border: 1px solid black;
     border-radius: 10px;
-    margin-top: 120px;
-    padding: 30px;
-    color: white
+    background-color: #466ca2;
 }
 #head-container{
     display: flex;
     justify-content: space-between;
-}
-
-#hamburger{
-    margin-right: 5px;
+    margin-top: 3vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #466ca2;
 }
 
 #hamburger span {
@@ -33,6 +31,7 @@ h1{
 #userN{
     text-align: center;
     margin-bottom: 20px;
+    
 }
 
 #passW{
